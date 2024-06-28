@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOOSE</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbQWFNIbCYjH9rgmQIwvpiAz1RGvBTUXy1Ig&s'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        body.fade-in {
+            opacity: 1;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white; /* Keep the div background white */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GOOGLE MAPS</h1>
+        <button onclick="navigate('podcast.html')">Listen to podcast</button>
+        <button onclick="navigate('read.html')">Read the story</button>
+    </div>
+
+    <script>
+        function navigate(option) {
+            window.location.href = option;
+        }
+
+        window.onload = function() {
+            document.body.classList.add('fade-in');
+        }
+    </script>
+</body>
+</html>
